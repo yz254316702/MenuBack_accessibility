@@ -3157,6 +3157,7 @@ com.owenyi.menuback.MyAccessibilityService -> com.owenyi.menuback.MyAccessibilit
     android.widget.LinearLayout mFloatView -> d
     android.widget.Button mButtonMenu -> e
     android.widget.Button mButtonBack -> f
+    android.widget.Button mButtonRecent -> g
     void onAccessibilityEvent(android.view.accessibility.AccessibilityEvent) -> onAccessibilityEvent
     void processAccessibilityEnvent(android.view.accessibility.AccessibilityEvent) -> a
     void onCreate() -> onCreate
@@ -3172,10 +3173,6 @@ com.owenyi.menuback.MyAccessibilityService$2 -> kn:
 com.owenyi.menuback.MyAccessibilityService$3 -> ko:
     com.owenyi.menuback.MyAccessibilityService this$0 -> a
     void onClick(android.view.View) -> onClick
-com.owenyi.menuback.myButton -> com.owenyi.menuback.myButton:
-    boolean mDownTouch -> a
-    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
-    boolean performClick() -> performClick
-com.owenyi.menuback.myThread -> kp:
-    android.accessibilityservice.AccessibilityService mService -> a
-    void setService(android.accessibilityservice.AccessibilityService) -> a
+com.owenyi.menuback.MyAccessibilityService$4 -> kp:
+    com.owenyi.menuback.MyAccessibilityService this$0 -> a
+    void onClick(android.view.View) -> onClick

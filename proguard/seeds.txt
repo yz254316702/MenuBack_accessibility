@@ -193,7 +193,3 @@ com.owenyi.menuback.R$string: int hello_world
 com.owenyi.menuback.R$style: int AppBaseTheme
 com.owenyi.menuback.R$style: int AppTheme
 com.owenyi.menuback.R$xml: int phone_accessibility
-com.owenyi.menuback.myButton
-com.owenyi.menuback.myButton: myButton(android.content.Context,android.util.AttributeSet,int)
-com.owenyi.menuback.myButton: myButton(android.content.Context,android.util.AttributeSet)
-com.owenyi.menuback.myButton: myButton(android.content.Context)

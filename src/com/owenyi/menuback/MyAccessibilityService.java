@@ -28,6 +28,7 @@ public class MyAccessibilityService extends AccessibilityService {
 	public static int INVOKE_TYPE = 0;
 	public static final int TYPE_ACTION_BACK = 1;
 	public static final int TYPE_ACTION_MENU = 2;
+	public static final int TYPE_ACTION_RECENT = 3;
 
 	public static void reset() {
 		INVOKE_TYPE = 0;
@@ -81,8 +82,12 @@ public class MyAccessibilityService extends AccessibilityService {
                 		MyAccessibilityService.this.performGlobalAction(GLOBAL_ACTION_BACK);
                 		MyAccessibilityService.INVOKE_TYPE = 0;
                 	}
+                	else if(MyAccessibilityService.INVOKE_TYPE == MyAccessibilityService.TYPE_ACTION_RECENT) {
+                		MyAccessibilityService.this.performGlobalAction(GLOBAL_ACTION_QUICK_SETTINGS);
+                		MyAccessibilityService.INVOKE_TYPE = 0;
+                	}
                 	try {
-						Thread.sleep(3000);
+						Thread.sleep(300);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -113,6 +118,7 @@ public class MyAccessibilityService extends AccessibilityService {
 	LinearLayout mFloatView; 
 	Button mButtonMenu;
 	Button mButtonBack;
+	Button mButtonRecent;
 	private void createFloatView()  
 	{  
 		wmParams = new WindowManager.LayoutParams();  
@@ -148,26 +154,14 @@ public class MyAccessibilityService extends AccessibilityService {
 		//mWindowManager.addView(mFloatLayout, wmParams);  
 		//浮动窗口按钮  
 		mFloatView = new LinearLayout(getApplicationContext());
+		
 		mButtonMenu = new Button(getApplicationContext());
-		mButtonBack = new Button(getApplicationContext());
-		mButtonMenu.setWidth(20);mButtonMenu.setBackgroundColor(Color.BLUE);
-		mButtonBack.setWidth(20);mButtonBack.setBackgroundColor(Color.RED);
+		mButtonMenu.setWidth(20);
+		mButtonMenu.setBackgroundColor(Color.BLUE);
 		mButtonMenu.setAlpha((float) 0.5);
-		mButtonBack.setAlpha((float) 0.5);
-		mButtonBack.setContentDescription("Button Back");
 		mButtonMenu.setContentDescription("Button Menu");
-		mButtonBack.setText("很低");
 		mButtonMenu.setText("速度");
 		mFloatView.addView(mButtonMenu);
-		mFloatView.addView(mButtonBack);
-		mFloatView.setLayoutParams(new LayoutParams(20, STATUS_BAR_HEIGHT));
-		mWindowManager.addView(mFloatView, wmParams); 
-		
-		Log.i("test", "Width/2--->" + mFloatView.getMeasuredWidth()/2);  
-		Log.i("test", "Height/2--->" + mFloatView.getMeasuredHeight()/2);  
-		//设置监听浮动窗口的触摸移动  
-	
-
 		mButtonMenu.setOnClickListener(new OnClickListener()   
 		{  
 
@@ -178,7 +172,33 @@ public class MyAccessibilityService extends AccessibilityService {
 				//mButtonMenu.sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_CLICKED);
 				// TODO Auto-generated method stub  
 			}  
-		});  
+		}); 
+
+		mButtonRecent = new Button(getApplicationContext());
+		mButtonRecent.setWidth(20);
+		mButtonRecent.setBackgroundColor(Color.GREEN);
+		mButtonRecent.setAlpha((float) 0.5);
+		mButtonRecent.setContentDescription("Button Recent");
+		mButtonRecent.setText("啊");
+		mFloatView.addView(mButtonRecent);
+		mButtonRecent.setOnClickListener(new OnClickListener()   
+		{  
+
+			@Override  
+			public void onClick(View v)   
+			{ Log.d("test","  mButtonRecent onClick");
+				MyAccessibilityService.INVOKE_TYPE = MyAccessibilityService.TYPE_ACTION_RECENT;
+				//mButtonRecent.sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_CLICKED);
+				// TODO Auto-generated method stub  
+			}  
+		});
+		mButtonBack = new Button(getApplicationContext());
+		mButtonBack.setWidth(20);
+		mButtonBack.setBackgroundColor(Color.RED);
+		mButtonBack.setAlpha((float) 0.5);
+		mButtonBack.setContentDescription("Button Back");
+		mButtonBack.setText("很低");
+		mFloatView.addView(mButtonBack);
 		mButtonBack.setOnClickListener(new OnClickListener()   
 		{  
 
@@ -189,6 +209,13 @@ public class MyAccessibilityService extends AccessibilityService {
 				//mButtonBack.sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_CLICKED);
 				// TODO Auto-generated method stub  
 			}  
-		}); 
+		});
+		
+		mFloatView.setLayoutParams(new LayoutParams(20, STATUS_BAR_HEIGHT));
+		mWindowManager.addView(mFloatView, wmParams); 
+		
+		Log.i("test", "Width/2--->" + mFloatView.getMeasuredWidth()/2);  
+		Log.i("test", "Height/2--->" + mFloatView.getMeasuredHeight()/2);  
+		//设置监听浮动窗口的触摸移动  
 	} 
 }

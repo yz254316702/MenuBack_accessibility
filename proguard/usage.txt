@@ -2553,7 +2553,8 @@ com.owenyi.menuback.MainActivity:
 com.owenyi.menuback.MyAccessibilityService:
     public static final int TYPE_ACTION_BACK
     public static final int TYPE_ACTION_MENU
-    33:34:public static void reset()
+    public static final int TYPE_ACTION_RECENT
+    34:35:public static void reset()
 com.owenyi.menuback.R
 com.owenyi.menuback.R$attr
 com.owenyi.menuback.R$dimen

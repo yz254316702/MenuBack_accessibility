@@ -111787,19 +111787,22 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 246):
+Constant Pool (count = 254):
   + Integer [-16776961]
+  + Integer [-16711936]
   + Integer [-65536]
   + Float [0.5]
   + Float [25.0]
   + String [Button Back]
   + String [Button Menu]
+  + String [Button Recent]
   + String [Height/2--->]
   + String [Width/2--->]
   + String [mWindowManager--->]
   + String [test]
   + String [the source = null]
   + String [window]
+  + String [啊]
   + String [很低]
   + String [速度]
   + Class [android/accessibilityservice/AccessibilityService]
@@ -111815,6 +111818,7 @@ Constant Pool (count = 246):
   + Class [com/owenyi/menuback/MyAccessibilityService]
   + Class [java/lang/Math]
   + Class [java/lang/StringBuilder]
+  + Class [java/lang/Thread]
   + Class [km]
   + Class [kn]
   + Class [ko]
@@ -111834,6 +111838,7 @@ Constant Pool (count = 246):
   + Fieldref [com/owenyi/menuback/MyAccessibilityService.d Landroid/widget/LinearLayout;]
   + Fieldref [com/owenyi/menuback/MyAccessibilityService.e Landroid/widget/Button;]
   + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
+  + Fieldref [com/owenyi/menuback/MyAccessibilityService.g Landroid/widget/Button;]
   + Methodref [android/accessibilityservice/AccessibilityService.<init> ()V]
   + Methodref [android/accessibilityservice/AccessibilityService.onCreate ()V]
   + Methodref [android/app/Application.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
@@ -111867,12 +111872,12 @@ Constant Pool (count = 246):
   + Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
   + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
   + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/Thread.<init> (Ljava/lang/Runnable;)V]
+  + Methodref [java/lang/Thread.start ()V]
   + Methodref [km.<init> (Lcom/owenyi/menuback/MyAccessibilityService;)V]
   + Methodref [kn.<init> (Lcom/owenyi/menuback/MyAccessibilityService;)V]
   + Methodref [ko.<init> (Lcom/owenyi/menuback/MyAccessibilityService;)V]
-  + Methodref [kp.<init> (Ljava/lang/Runnable;)V]
-  + Methodref [kp.a (Landroid/accessibilityservice/AccessibilityService;)V]
-  + Methodref [kp.start ()V]
+  + Methodref [kp.<init> (Lcom/owenyi/menuback/MyAccessibilityService;)V]
   + InterfaceMethodref [android/view/WindowManager.addView (Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V]
   + NameAndType [<init> ()V]
   + NameAndType [<init> (II)V]
@@ -111881,7 +111886,6 @@ Constant Pool (count = 246):
   + NameAndType [<init> (Ljava/lang/Runnable;)V]
   + NameAndType [<init> (Ljava/lang/String;)V]
   + NameAndType [a ()V]
-  + NameAndType [a (Landroid/accessibilityservice/AccessibilityService;)V]
   + NameAndType [a (Landroid/view/accessibility/AccessibilityEvent;)V]
   + NameAndType [a I]
   + NameAndType [addView (Landroid/view/View;)V]
@@ -111899,6 +111903,7 @@ Constant Pool (count = 246):
   + NameAndType [f Landroid/widget/Button;]
   + NameAndType [flags I]
   + NameAndType [format I]
+  + NameAndType [g Landroid/widget/Button;]
   + NameAndType [getApplication ()Landroid/app/Application;]
   + NameAndType [getApplicationContext ()Landroid/content/Context;]
   + NameAndType [getDisplayMetrics ()Landroid/util/DisplayMetrics;]
@@ -111939,7 +111944,6 @@ Constant Pool (count = 246):
   + Utf8 [(I)Ljava/lang/StringBuilder;]
   + Utf8 [(I)V]
   + Utf8 [(II)V]
-  + Utf8 [(Landroid/accessibilityservice/AccessibilityService;)V]
   + Utf8 [(Landroid/content/Context;)V]
   + Utf8 [(Landroid/view/KeyEvent;)Z]
   + Utf8 [(Landroid/view/View$OnClickListener;)V]
@@ -111958,6 +111962,7 @@ Constant Pool (count = 246):
   + Utf8 [<init>]
   + Utf8 [Button Back]
   + Utf8 [Button Menu]
+  + Utf8 [Button Recent]
   + Utf8 [Code]
   + Utf8 [F]
   + Utf8 [Height/2--->]
@@ -111992,6 +111997,7 @@ Constant Pool (count = 246):
   + Utf8 [f]
   + Utf8 [flags]
   + Utf8 [format]
+  + Utf8 [g]
   + Utf8 [getApplication]
   + Utf8 [getApplicationContext]
   + Utf8 [getDisplayMetrics]
@@ -112006,6 +112012,7 @@ Constant Pool (count = 246):
   + Utf8 [i]
   + Utf8 [java/lang/Math]
   + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/lang/Thread]
   + Utf8 [km]
   + Utf8 [kn]
   + Utf8 [ko]
@@ -112031,10 +112038,11 @@ Constant Pool (count = 246):
   + Utf8 [window]
   + Utf8 [x]
   + Utf8 [y]
+  + Utf8 [啊]
   + Utf8 [很低]
   + Utf8 [速度]
 
-Fields (count = 6):
+Fields (count = 7):
   + Field:        a I
     Access flags: 0x9
       = public static int a
@@ -112053,6 +112061,9 @@ Fields (count = 6):
   + Field:        f Landroid/widget/Button;
     Access flags: 0x0
       = android.widget.Button f
+  + Field:        g Landroid/widget/Button;
+    Access flags: 0x0
+      = android.widget.Button g
 
 Methods (count = 8):
   - Method:       <clinit>()V
@@ -112061,7 +112072,7 @@ Methods (count = 8):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 0, stack = 1):
       [0] iconst_0
-      [1] putstatic #41
+      [1] putstatic #45
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.a I]
       [4] return
       Code attribute exceptions (count = 0):
@@ -112072,7 +112083,7 @@ Methods (count = 8):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #47
+      [1] invokespecial #52
         + Methodref [android/accessibilityservice/AccessibilityService.<init> ()V]
       [4] return
       Code attribute exceptions (count = 0):
@@ -112084,7 +112095,7 @@ Methods (count = 8):
     + Code attribute instructions (code length = 6, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #71
+      [2] invokespecial #76
         + Methodref [com/owenyi/menuback/MyAccessibilityService.a (Landroid/view/accessibility/AccessibilityEvent;)V]
       [5] return
       Code attribute exceptions (count = 0):
@@ -112094,25 +112105,25 @@ Methods (count = 8):
       = private void a(android.view.accessibility.AccessibilityEvent)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 29, locals = 2, stack = 2):
-      [0] ldc #10
+      [0] ldc #12
         + String [test]
       [2] aload_1 v1
-      [3] invokevirtual #56
+      [3] invokevirtual #61
         + Methodref [android/view/accessibility/AccessibilityEvent.getEventType ()I]
-      [6] invokestatic #55
+      [6] invokestatic #60
         + Methodref [android/view/accessibility/AccessibilityEvent.eventTypeToString (I)Ljava/lang/String;]
-      [9] invokestatic #51
+      [9] invokestatic #56
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [12] pop
       [13] aload_1 v1
-      [14] invokevirtual #57
+      [14] invokevirtual #62
         + Methodref [android/view/accessibility/AccessibilityEvent.getSource ()Landroid/view/accessibility/AccessibilityNodeInfo;]
       [17] ifnonnull +11 (target=28)
-      [20] ldc #10
+      [20] ldc #12
         + String [test]
-      [22] ldc #11
+      [22] ldc #13
         + String [the source = null]
-      [24] invokestatic #51
+      [24] invokestatic #56
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [27] pop
       [28] return
@@ -112124,33 +112135,29 @@ Methods (count = 8):
     Access flags: 0x1
       = public void onCreate()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 34, locals = 2, stack = 5):
+    + Code attribute instructions (code length = 29, locals = 2, stack = 5):
       [0] aload_0 v0
-      [1] invokespecial #48
+      [1] invokespecial #53
         + Methodref [android/accessibilityservice/AccessibilityService.onCreate ()V]
       [4] aload_0 v0
-      [5] invokespecial #70
+      [5] invokespecial #75
         + Methodref [com/owenyi/menuback/MyAccessibilityService.a ()V]
       [8] new #31
-        + Class [kp]
+        + Class [java/lang/Thread]
       [11] dup
-      [12] new #28
+      [12] new #32
         + Class [km]
       [15] dup
       [16] aload_0 v0
-      [17] invokespecial #80
+      [17] invokespecial #87
         + Methodref [km.<init> (Lcom/owenyi/menuback/MyAccessibilityService;)V]
-      [20] invokespecial #83
-        + Methodref [kp.<init> (Ljava/lang/Runnable;)V]
+      [20] invokespecial #85
+        + Methodref [java/lang/Thread.<init> (Ljava/lang/Runnable;)V]
       [23] astore_1 v1
       [24] aload_1 v1
-      [25] aload_0 v0
-      [26] invokevirtual #84
-        + Methodref [kp.a (Landroid/accessibilityservice/AccessibilityService;)V]
-      [29] aload_1 v1
-      [30] invokevirtual #85
-        + Methodref [kp.start ()V]
-      [33] return
+      [25] invokevirtual #86
+        + Methodref [java/lang/Thread.start ()V]
+      [28] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       onKeyEvent(Landroid/view/KeyEvent;)Z
@@ -112174,324 +112181,388 @@ Methods (count = 8):
     Access flags: 0x2
       = private void a()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 430, locals = 3, stack = 5):
+    + Code attribute instructions (code length = 516, locals = 3, stack = 5):
       [0] aload_0 v0
-      [1] new #21
+      [1] new #24
         + Class [android/view/WindowManager$LayoutParams]
       [4] dup
-      [5] invokespecial #53
+      [5] invokespecial #58
         + Methodref [android/view/WindowManager$LayoutParams.<init> ()V]
-      [8] putfield #42
+      [8] putfield #46
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.b Landroid/view/WindowManager$LayoutParams;]
       [11] aload_0 v0
       [12] aload_0 v0
-      [13] invokevirtual #72
+      [13] invokevirtual #77
         + Methodref [com/owenyi/menuback/MyAccessibilityService.getApplication ()Landroid/app/Application;]
       [16] aload_0 v0
-      [17] invokevirtual #72
+      [17] invokevirtual #77
         + Methodref [com/owenyi/menuback/MyAccessibilityService.getApplication ()Landroid/app/Application;]
       [20] pop
-      [21] ldc #12
+      [21] ldc #14
         + String [window]
-      [23] invokevirtual #49
+      [23] invokevirtual #54
         + Methodref [android/app/Application.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [26] checkcast #20
+      [26] checkcast #23
         + Class [android/view/WindowManager]
-      [29] putfield #43
+      [29] putfield #47
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.c Landroid/view/WindowManager;]
-      [32] ldc #10
+      [32] ldc #12
         + String [test]
-      [34] new #27
+      [34] new #30
         + Class [java/lang/StringBuilder]
       [37] dup
-      [38] ldc #9
+      [38] ldc #11
         + String [mWindowManager--->]
-      [40] invokespecial #76
+      [40] invokespecial #81
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [43] aload_0 v0
-      [44] getfield #43
+      [44] getfield #47
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.c Landroid/view/WindowManager;]
-      [47] invokevirtual #78
+      [47] invokevirtual #83
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
-      [50] invokevirtual #79
+      [50] invokevirtual #84
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [53] invokestatic #52
+      [53] invokestatic #57
         + Methodref [android/util/Log.i (Ljava/lang/String;Ljava/lang/String;)I]
       [56] pop
       [57] aload_0 v0
-      [58] getfield #42
+      [58] getfield #46
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.b Landroid/view/WindowManager$LayoutParams;]
       [61] sipush 2010
-      [64] putfield #37
+      [64] putfield #41
         + Fieldref [android/view/WindowManager$LayoutParams.type I]
       [67] aload_0 v0
-      [68] getfield #42
+      [68] getfield #46
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.b Landroid/view/WindowManager$LayoutParams;]
       [71] iconst_1
-      [72] putfield #34
+      [72] putfield #38
         + Fieldref [android/view/WindowManager$LayoutParams.format I]
       [75] aload_0 v0
-      [76] getfield #42
+      [76] getfield #46
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.b Landroid/view/WindowManager$LayoutParams;]
       [79] sipush 264
-      [82] putfield #33
+      [82] putfield #37
         + Fieldref [android/view/WindowManager$LayoutParams.flags I]
       [85] aload_0 v0
-      [86] getfield #42
+      [86] getfield #46
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.b Landroid/view/WindowManager$LayoutParams;]
       [89] bipush 49
-      [91] putfield #35
+      [91] putfield #39
         + Fieldref [android/view/WindowManager$LayoutParams.gravity I]
       [94] aload_0 v0
-      [95] getfield #42
+      [95] getfield #46
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.b Landroid/view/WindowManager$LayoutParams;]
       [98] iconst_0
-      [99] putfield #39
+      [99] putfield #43
         + Fieldref [android/view/WindowManager$LayoutParams.x I]
       [102] aload_0 v0
-      [103] getfield #42
+      [103] getfield #46
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.b Landroid/view/WindowManager$LayoutParams;]
       [106] iconst_0
-      [107] putfield #40
+      [107] putfield #44
         + Fieldref [android/view/WindowManager$LayoutParams.y I]
       [110] aload_0 v0
-      [111] invokevirtual #74
+      [111] invokevirtual #79
         + Methodref [com/owenyi/menuback/MyAccessibilityService.getResources ()Landroid/content/res/Resources;]
-      [114] invokevirtual #50
+      [114] invokevirtual #55
         + Methodref [android/content/res/Resources.getDisplayMetrics ()Landroid/util/DisplayMetrics;]
       [117] astore_1 v1
-      [118] ldc #4
+      [118] ldc #5
         + Float [25.0]
       [120] aload_1 v1
-      [121] getfield #32
+      [121] getfield #36
         + Fieldref [android/util/DisplayMetrics.density F]
       [124] fmul
       [125] f2d
-      [126] invokestatic #75
+      [126] invokestatic #80
         + Methodref [java/lang/Math.ceil (D)D]
       [129] d2i
       [130] istore_2 v2
       [131] aload_0 v0
-      [132] getfield #42
+      [132] getfield #46
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.b Landroid/view/WindowManager$LayoutParams;]
       [135] bipush -2
-      [137] putfield #38
+      [137] putfield #42
         + Fieldref [android/view/WindowManager$LayoutParams.width I]
       [140] aload_0 v0
-      [141] getfield #42
+      [141] getfield #46
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.b Landroid/view/WindowManager$LayoutParams;]
       [144] iload_2 v2
-      [145] putfield #36
+      [145] putfield #40
         + Fieldref [android/view/WindowManager$LayoutParams.height I]
       [148] aload_0 v0
-      [149] new #24
+      [149] new #27
         + Class [android/widget/LinearLayout]
       [152] dup
       [153] aload_0 v0
-      [154] invokevirtual #73
+      [154] invokevirtual #78
         + Methodref [com/owenyi/menuback/MyAccessibilityService.getApplicationContext ()Landroid/content/Context;]
-      [157] invokespecial #65
+      [157] invokespecial #70
         + Methodref [android/widget/LinearLayout.<init> (Landroid/content/Context;)V]
-      [160] putfield #44
+      [160] putfield #48
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.d Landroid/widget/LinearLayout;]
       [163] aload_0 v0
-      [164] new #23
+      [164] new #26
         + Class [android/widget/Button]
       [167] dup
       [168] aload_0 v0
-      [169] invokevirtual #73
+      [169] invokevirtual #78
         + Methodref [com/owenyi/menuback/MyAccessibilityService.getApplicationContext ()Landroid/content/Context;]
-      [172] invokespecial #58
+      [172] invokespecial #63
         + Methodref [android/widget/Button.<init> (Landroid/content/Context;)V]
-      [175] putfield #45
+      [175] putfield #49
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.e Landroid/widget/Button;]
       [178] aload_0 v0
-      [179] new #23
-        + Class [android/widget/Button]
-      [182] dup
-      [183] aload_0 v0
-      [184] invokevirtual #73
-        + Methodref [com/owenyi/menuback/MyAccessibilityService.getApplicationContext ()Landroid/content/Context;]
-      [187] invokespecial #58
-        + Methodref [android/widget/Button.<init> (Landroid/content/Context;)V]
-      [190] putfield #46
-        + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
-      [193] aload_0 v0
-      [194] getfield #45
+      [179] getfield #49
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.e Landroid/widget/Button;]
-      [197] bipush 20
-      [199] invokevirtual #64
+      [182] bipush 20
+      [184] invokevirtual #69
         + Methodref [android/widget/Button.setWidth (I)V]
-      [202] aload_0 v0
-      [203] getfield #45
+      [187] aload_0 v0
+      [188] getfield #49
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.e Landroid/widget/Button;]
-      [206] ldc #1
+      [191] ldc #1
         + Integer [-16776961]
-      [208] invokevirtual #60
+      [193] invokevirtual #65
         + Methodref [android/widget/Button.setBackgroundColor (I)V]
-      [211] aload_0 v0
-      [212] getfield #46
-        + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
-      [215] bipush 20
-      [217] invokevirtual #64
-        + Methodref [android/widget/Button.setWidth (I)V]
-      [220] aload_0 v0
-      [221] getfield #46
-        + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
-      [224] ldc #2
-        + Integer [-65536]
-      [226] invokevirtual #60
-        + Methodref [android/widget/Button.setBackgroundColor (I)V]
-      [229] aload_0 v0
-      [230] getfield #45
+      [196] aload_0 v0
+      [197] getfield #49
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.e Landroid/widget/Button;]
-      [233] ldc #3
+      [200] ldc #4
         + Float [0.5]
-      [235] invokevirtual #59
+      [202] invokevirtual #64
         + Methodref [android/widget/Button.setAlpha (F)V]
-      [238] aload_0 v0
-      [239] getfield #46
-        + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
-      [242] ldc #3
-        + Float [0.5]
-      [244] invokevirtual #59
-        + Methodref [android/widget/Button.setAlpha (F)V]
-      [247] aload_0 v0
-      [248] getfield #46
-        + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
-      [251] ldc #5
-        + String [Button Back]
-      [253] invokevirtual #61
-        + Methodref [android/widget/Button.setContentDescription (Ljava/lang/CharSequence;)V]
-      [256] aload_0 v0
-      [257] getfield #45
+      [205] aload_0 v0
+      [206] getfield #49
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.e Landroid/widget/Button;]
-      [260] ldc #6
+      [209] ldc #7
         + String [Button Menu]
-      [262] invokevirtual #61
+      [211] invokevirtual #66
         + Methodref [android/widget/Button.setContentDescription (Ljava/lang/CharSequence;)V]
-      [265] aload_0 v0
-      [266] getfield #46
-        + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
-      [269] ldc #13
-        + String [很低]
-      [271] invokevirtual #63
-        + Methodref [android/widget/Button.setText (Ljava/lang/CharSequence;)V]
-      [274] aload_0 v0
-      [275] getfield #45
+      [214] aload_0 v0
+      [215] getfield #49
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.e Landroid/widget/Button;]
-      [278] ldc #14
+      [218] ldc #17
         + String [速度]
-      [280] invokevirtual #63
+      [220] invokevirtual #68
         + Methodref [android/widget/Button.setText (Ljava/lang/CharSequence;)V]
-      [283] aload_0 v0
-      [284] getfield #44
+      [223] aload_0 v0
+      [224] getfield #48
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.d Landroid/widget/LinearLayout;]
-      [287] aload_0 v0
-      [288] getfield #45
+      [227] aload_0 v0
+      [228] getfield #49
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.e Landroid/widget/Button;]
-      [291] invokevirtual #66
+      [231] invokevirtual #71
         + Methodref [android/widget/LinearLayout.addView (Landroid/view/View;)V]
-      [294] aload_0 v0
-      [295] getfield #44
-        + Fieldref [com/owenyi/menuback/MyAccessibilityService.d Landroid/widget/LinearLayout;]
-      [298] aload_0 v0
-      [299] getfield #46
-        + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
-      [302] invokevirtual #66
-        + Methodref [android/widget/LinearLayout.addView (Landroid/view/View;)V]
-      [305] aload_0 v0
-      [306] getfield #44
-        + Fieldref [com/owenyi/menuback/MyAccessibilityService.d Landroid/widget/LinearLayout;]
-      [309] new #21
-        + Class [android/view/WindowManager$LayoutParams]
-      [312] dup
-      [313] bipush 20
-      [315] iload_2 v2
-      [316] invokespecial #54
-        + Methodref [android/view/WindowManager$LayoutParams.<init> (II)V]
-      [319] invokevirtual #69
-        + Methodref [android/widget/LinearLayout.setLayoutParams (Landroid/view/ViewGroup$LayoutParams;)V]
-      [322] aload_0 v0
-      [323] getfield #43
-        + Fieldref [com/owenyi/menuback/MyAccessibilityService.c Landroid/view/WindowManager;]
-      [326] aload_0 v0
-      [327] getfield #44
-        + Fieldref [com/owenyi/menuback/MyAccessibilityService.d Landroid/widget/LinearLayout;]
-      [330] aload_0 v0
-      [331] getfield #42
-        + Fieldref [com/owenyi/menuback/MyAccessibilityService.b Landroid/view/WindowManager$LayoutParams;]
-      [334] invokeinterface #86
-        + InterfaceMethodref [android/view/WindowManager.addView (Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V]
-      [339] ldc #10
-        + String [test]
-      [341] new #27
-        + Class [java/lang/StringBuilder]
-      [344] dup
-      [345] ldc #8
-        + String [Width/2--->]
-      [347] invokespecial #76
-        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [350] aload_0 v0
-      [351] getfield #44
-        + Fieldref [com/owenyi/menuback/MyAccessibilityService.d Landroid/widget/LinearLayout;]
-      [354] invokevirtual #68
-        + Methodref [android/widget/LinearLayout.getMeasuredWidth ()I]
-      [357] iconst_2
-      [358] idiv
-      [359] invokevirtual #77
-        + Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
-      [362] invokevirtual #79
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [365] invokestatic #52
-        + Methodref [android/util/Log.i (Ljava/lang/String;Ljava/lang/String;)I]
-      [368] pop
-      [369] ldc #10
-        + String [test]
-      [371] new #27
-        + Class [java/lang/StringBuilder]
-      [374] dup
-      [375] ldc #7
-        + String [Height/2--->]
-      [377] invokespecial #76
-        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [380] aload_0 v0
-      [381] getfield #44
-        + Fieldref [com/owenyi/menuback/MyAccessibilityService.d Landroid/widget/LinearLayout;]
-      [384] invokevirtual #67
-        + Methodref [android/widget/LinearLayout.getMeasuredHeight ()I]
-      [387] iconst_2
-      [388] idiv
-      [389] invokevirtual #77
-        + Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
-      [392] invokevirtual #79
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [395] invokestatic #52
-        + Methodref [android/util/Log.i (Ljava/lang/String;Ljava/lang/String;)I]
-      [398] pop
-      [399] aload_0 v0
-      [400] getfield #45
+      [234] aload_0 v0
+      [235] getfield #49
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.e Landroid/widget/Button;]
-      [403] new #29
+      [238] new #33
         + Class [kn]
-      [406] dup
-      [407] aload_0 v0
-      [408] invokespecial #81
+      [241] dup
+      [242] aload_0 v0
+      [243] invokespecial #88
         + Methodref [kn.<init> (Lcom/owenyi/menuback/MyAccessibilityService;)V]
-      [411] invokevirtual #62
+      [246] invokevirtual #67
         + Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
-      [414] aload_0 v0
-      [415] getfield #46
-        + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
-      [418] new #30
+      [249] aload_0 v0
+      [250] new #26
+        + Class [android/widget/Button]
+      [253] dup
+      [254] aload_0 v0
+      [255] invokevirtual #78
+        + Methodref [com/owenyi/menuback/MyAccessibilityService.getApplicationContext ()Landroid/content/Context;]
+      [258] invokespecial #63
+        + Methodref [android/widget/Button.<init> (Landroid/content/Context;)V]
+      [261] putfield #51
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.g Landroid/widget/Button;]
+      [264] aload_0 v0
+      [265] getfield #51
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.g Landroid/widget/Button;]
+      [268] bipush 20
+      [270] invokevirtual #69
+        + Methodref [android/widget/Button.setWidth (I)V]
+      [273] aload_0 v0
+      [274] getfield #51
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.g Landroid/widget/Button;]
+      [277] ldc #2
+        + Integer [-16711936]
+      [279] invokevirtual #65
+        + Methodref [android/widget/Button.setBackgroundColor (I)V]
+      [282] aload_0 v0
+      [283] getfield #51
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.g Landroid/widget/Button;]
+      [286] ldc #4
+        + Float [0.5]
+      [288] invokevirtual #64
+        + Methodref [android/widget/Button.setAlpha (F)V]
+      [291] aload_0 v0
+      [292] getfield #51
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.g Landroid/widget/Button;]
+      [295] ldc #8
+        + String [Button Recent]
+      [297] invokevirtual #66
+        + Methodref [android/widget/Button.setContentDescription (Ljava/lang/CharSequence;)V]
+      [300] aload_0 v0
+      [301] getfield #51
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.g Landroid/widget/Button;]
+      [304] ldc #15
+        + String [啊]
+      [306] invokevirtual #68
+        + Methodref [android/widget/Button.setText (Ljava/lang/CharSequence;)V]
+      [309] aload_0 v0
+      [310] getfield #48
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.d Landroid/widget/LinearLayout;]
+      [313] aload_0 v0
+      [314] getfield #51
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.g Landroid/widget/Button;]
+      [317] invokevirtual #71
+        + Methodref [android/widget/LinearLayout.addView (Landroid/view/View;)V]
+      [320] aload_0 v0
+      [321] getfield #51
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.g Landroid/widget/Button;]
+      [324] new #34
         + Class [ko]
-      [421] dup
-      [422] aload_0 v0
-      [423] invokespecial #82
+      [327] dup
+      [328] aload_0 v0
+      [329] invokespecial #89
         + Methodref [ko.<init> (Lcom/owenyi/menuback/MyAccessibilityService;)V]
-      [426] invokevirtual #62
+      [332] invokevirtual #67
         + Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
-      [429] return
+      [335] aload_0 v0
+      [336] new #26
+        + Class [android/widget/Button]
+      [339] dup
+      [340] aload_0 v0
+      [341] invokevirtual #78
+        + Methodref [com/owenyi/menuback/MyAccessibilityService.getApplicationContext ()Landroid/content/Context;]
+      [344] invokespecial #63
+        + Methodref [android/widget/Button.<init> (Landroid/content/Context;)V]
+      [347] putfield #50
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
+      [350] aload_0 v0
+      [351] getfield #50
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
+      [354] bipush 20
+      [356] invokevirtual #69
+        + Methodref [android/widget/Button.setWidth (I)V]
+      [359] aload_0 v0
+      [360] getfield #50
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
+      [363] ldc #3
+        + Integer [-65536]
+      [365] invokevirtual #65
+        + Methodref [android/widget/Button.setBackgroundColor (I)V]
+      [368] aload_0 v0
+      [369] getfield #50
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
+      [372] ldc #4
+        + Float [0.5]
+      [374] invokevirtual #64
+        + Methodref [android/widget/Button.setAlpha (F)V]
+      [377] aload_0 v0
+      [378] getfield #50
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
+      [381] ldc #6
+        + String [Button Back]
+      [383] invokevirtual #66
+        + Methodref [android/widget/Button.setContentDescription (Ljava/lang/CharSequence;)V]
+      [386] aload_0 v0
+      [387] getfield #50
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
+      [390] ldc #16
+        + String [很低]
+      [392] invokevirtual #68
+        + Methodref [android/widget/Button.setText (Ljava/lang/CharSequence;)V]
+      [395] aload_0 v0
+      [396] getfield #48
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.d Landroid/widget/LinearLayout;]
+      [399] aload_0 v0
+      [400] getfield #50
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
+      [403] invokevirtual #71
+        + Methodref [android/widget/LinearLayout.addView (Landroid/view/View;)V]
+      [406] aload_0 v0
+      [407] getfield #50
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.f Landroid/widget/Button;]
+      [410] new #35
+        + Class [kp]
+      [413] dup
+      [414] aload_0 v0
+      [415] invokespecial #90
+        + Methodref [kp.<init> (Lcom/owenyi/menuback/MyAccessibilityService;)V]
+      [418] invokevirtual #67
+        + Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
+      [421] aload_0 v0
+      [422] getfield #48
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.d Landroid/widget/LinearLayout;]
+      [425] new #24
+        + Class [android/view/WindowManager$LayoutParams]
+      [428] dup
+      [429] bipush 20
+      [431] iload_2 v2
+      [432] invokespecial #59
+        + Methodref [android/view/WindowManager$LayoutParams.<init> (II)V]
+      [435] invokevirtual #74
+        + Methodref [android/widget/LinearLayout.setLayoutParams (Landroid/view/ViewGroup$LayoutParams;)V]
+      [438] aload_0 v0
+      [439] getfield #47
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.c Landroid/view/WindowManager;]
+      [442] aload_0 v0
+      [443] getfield #48
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.d Landroid/widget/LinearLayout;]
+      [446] aload_0 v0
+      [447] getfield #46
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.b Landroid/view/WindowManager$LayoutParams;]
+      [450] invokeinterface #91
+        + InterfaceMethodref [android/view/WindowManager.addView (Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V]
+      [455] ldc #12
+        + String [test]
+      [457] new #30
+        + Class [java/lang/StringBuilder]
+      [460] dup
+      [461] ldc #10
+        + String [Width/2--->]
+      [463] invokespecial #81
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [466] aload_0 v0
+      [467] getfield #48
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.d Landroid/widget/LinearLayout;]
+      [470] invokevirtual #73
+        + Methodref [android/widget/LinearLayout.getMeasuredWidth ()I]
+      [473] iconst_2
+      [474] idiv
+      [475] invokevirtual #82
+        + Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
+      [478] invokevirtual #84
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [481] invokestatic #57
+        + Methodref [android/util/Log.i (Ljava/lang/String;Ljava/lang/String;)I]
+      [484] pop
+      [485] ldc #12
+        + String [test]
+      [487] new #30
+        + Class [java/lang/StringBuilder]
+      [490] dup
+      [491] ldc #9
+        + String [Height/2--->]
+      [493] invokespecial #81
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [496] aload_0 v0
+      [497] getfield #48
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.d Landroid/widget/LinearLayout;]
+      [500] invokevirtual #72
+        + Methodref [android/widget/LinearLayout.getMeasuredHeight ()I]
+      [503] iconst_2
+      [504] idiv
+      [505] invokevirtual #82
+        + Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
+      [508] invokevirtual #84
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [511] invokestatic #57
+        + Methodref [android/util/Log.i (Ljava/lang/String;Ljava/lang/String;)I]
+      [514] pop
+      [515] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
 
@@ -112515,7 +112586,7 @@ Constant Pool (count = 41):
   + Class [java/lang/Runnable]
   + Class [java/lang/Thread]
   + Class [km]
-  + Long [3000]
+  + Long [300]
   + Fieldref [com/owenyi/menuback/MyAccessibilityService.a I]
   + Fieldref [km.a Lcom/owenyi/menuback/MyAccessibilityService;]
   + Methodref [com/owenyi/menuback/MyAccessibilityService.performGlobalAction (I)Z]
@@ -112574,7 +112645,7 @@ Methods (count = 2):
     Access flags: 0x1
       = public void run()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 60, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 83, locals = 2, stack = 2):
       [0] getstatic #9
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.a I]
       [3] iconst_2
@@ -112589,11 +112660,11 @@ Methods (count = 2):
       [16] iconst_0
       [17] putstatic #9
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.a I]
-      [20] goto +23 (target=43)
+      [20] goto +46 (target=66)
       [23] getstatic #9
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.a I]
       [26] iconst_1
-      [27] ificmpne +16 (target=43)
+      [27] ificmpne +19 (target=46)
       [30] aload_0 v0
       [31] getfield #10
         + Fieldref [km.a Lcom/owenyi/menuback/MyAccessibilityService;]
@@ -112604,25 +112675,41 @@ Methods (count = 2):
       [39] iconst_0
       [40] putstatic #9
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.a I]
-      [43] ldc2_w #7
-        + Long [3000]
-      [46] invokestatic #14
+      [43] goto +23 (target=66)
+      [46] getstatic #9
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.a I]
+      [49] iconst_3
+      [50] ificmpne +16 (target=66)
+      [53] aload_0 v0
+      [54] getfield #10
+        + Fieldref [km.a Lcom/owenyi/menuback/MyAccessibilityService;]
+      [57] iconst_5
+      [58] invokevirtual #11
+        + Methodref [com/owenyi/menuback/MyAccessibilityService.performGlobalAction (I)Z]
+      [61] pop
+      [62] iconst_0
+      [63] putstatic #9
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.a I]
+      [66] ldc2_w #7
+        + Long [300]
+      [69] invokestatic #14
         + Methodref [java/lang/Thread.sleep (J)V]
-      [49] goto -49 (target=0)
-      [52] astore_1 v1
-      [53] aload_1 v1
-      [54] invokevirtual #12
+      [72] goto -72 (target=0)
+      [75] astore_1 v1
+      [76] aload_1 v1
+      [77] invokevirtual #12
         + Methodref [java/lang/InterruptedException.printStackTrace ()V]
-      [57] goto -57 (target=0)
+      [80] goto -80 (target=0)
       Code attribute exceptions (count = 1):
-      - ExceptionInfo (43 -> 49: 52):
+      - ExceptionInfo (66 -> 72: 75):
       + Class [java/lang/InterruptedException]
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 4):
+      + Stack map table attribute (count = 5):
         - [0] Var: ..., Stack: (empty)
         - [23] Var: ..., Stack: (empty)
-        - [43] Var: ..., Stack: (empty)
-        - [52] Var: ..., Stack: [a:java/lang/InterruptedException]
+        - [46] Var: ..., Stack: (empty)
+        - [66] Var: ..., Stack: (empty)
+        - [75] Var: ..., Stack: [a:java/lang/InterruptedException]
 
 Class file attributes (count = 0):
 
@@ -112726,7 +112813,7 @@ Interfaces (count = 1):
   + Class [android/view/View$OnClickListener]
 
 Constant Pool (count = 34):
-  + String [  mButtonBack onClick]
+  + String [  mButtonRecent onClick]
   + String [test]
   + Class [android/util/Log]
   + Class [android/view/View$OnClickListener]
@@ -112741,7 +112828,7 @@ Constant Pool (count = 34):
   + NameAndType [a I]
   + NameAndType [a Lcom/owenyi/menuback/MyAccessibilityService;]
   + NameAndType [d (Ljava/lang/String;Ljava/lang/String;)I]
-  + Utf8 [  mButtonBack onClick]
+  + Utf8 [  mButtonRecent onClick]
   + Utf8 [()V]
   + Utf8 [(Landroid/view/View;)V]
   + Utf8 [(Lcom/owenyi/menuback/MyAccessibilityService;)V]
@@ -112789,11 +112876,11 @@ Methods (count = 2):
       [0] ldc #2
         + String [test]
       [2] ldc #1
-        + String [  mButtonBack onClick]
+        + String [  mButtonRecent onClick]
       [4] invokestatic #10
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [7] pop
-      [8] iconst_1
+      [8] iconst_3
       [9] putstatic #8
         + Fieldref [com/owenyi/menuback/MyAccessibilityService.a I]
       [12] return
@@ -112803,269 +112890,88 @@ Methods (count = 2):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-+ Program class: com/owenyi/menuback/myButton
-  Superclass:    android/widget/Button
++ Program class: kp
+  Superclass:    java/lang/Object
   Major version: 0x33
   Minor version: 0x0
   Access flags:  0x21
-    = public class com.owenyi.menuback.myButton extends android.widget.Button
+    = public class kp extends java.lang.Object
 
-Interfaces (count = 0):
+Interfaces (count = 1):
+  + Class [android/view/View$OnClickListener]
 
-Constant Pool (count = 55):
-  + Float [0.5]
-  + String [  myButton performClick]
+Constant Pool (count = 34):
+  + String [  mButtonBack onClick]
   + String [test]
   + Class [android/util/Log]
-  + Class [android/view/MotionEvent]
-  + Class [android/widget/Button]
-  + Class [com/owenyi/menuback/myButton]
-  + Fieldref [com/owenyi/menuback/myButton.a Z]
+  + Class [android/view/View$OnClickListener]
+  + Class [com/owenyi/menuback/MyAccessibilityService]
+  + Class [java/lang/Object]
+  + Class [kp]
+  + Fieldref [com/owenyi/menuback/MyAccessibilityService.a I]
+  + Fieldref [kp.a Lcom/owenyi/menuback/MyAccessibilityService;]
   + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-  + Methodref [android/view/MotionEvent.getAction ()I]
-  + Methodref [android/widget/Button.<init> (Landroid/content/Context;)V]
-  + Methodref [android/widget/Button.<init> (Landroid/content/Context;Landroid/util/AttributeSet;)V]
-  + Methodref [android/widget/Button.<init> (Landroid/content/Context;Landroid/util/AttributeSet;I)V]
-  + Methodref [android/widget/Button.onTouchEvent (Landroid/view/MotionEvent;)Z]
-  + Methodref [android/widget/Button.performClick ()Z]
-  + Methodref [com/owenyi/menuback/myButton.performClick ()Z]
-  + Methodref [com/owenyi/menuback/myButton.sendAccessibilityEvent (I)V]
-  + Methodref [com/owenyi/menuback/myButton.setAlpha (F)V]
-  + NameAndType [<init> (Landroid/content/Context;)V]
-  + NameAndType [<init> (Landroid/content/Context;Landroid/util/AttributeSet;)V]
-  + NameAndType [<init> (Landroid/content/Context;Landroid/util/AttributeSet;I)V]
-  + NameAndType [a Z]
+  + Methodref [java/lang/Object.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [a I]
+  + NameAndType [a Lcom/owenyi/menuback/MyAccessibilityService;]
   + NameAndType [d (Ljava/lang/String;Ljava/lang/String;)I]
-  + NameAndType [getAction ()I]
-  + NameAndType [onTouchEvent (Landroid/view/MotionEvent;)Z]
-  + NameAndType [performClick ()Z]
-  + NameAndType [sendAccessibilityEvent (I)V]
-  + NameAndType [setAlpha (F)V]
-  + Utf8 [  myButton performClick]
-  + Utf8 [()I]
-  + Utf8 [()Z]
-  + Utf8 [(F)V]
-  + Utf8 [(I)V]
-  + Utf8 [(Landroid/content/Context;)V]
-  + Utf8 [(Landroid/content/Context;Landroid/util/AttributeSet;)V]
-  + Utf8 [(Landroid/content/Context;Landroid/util/AttributeSet;I)V]
-  + Utf8 [(Landroid/view/MotionEvent;)Z]
+  + Utf8 [  mButtonBack onClick]
+  + Utf8 [()V]
+  + Utf8 [(Landroid/view/View;)V]
+  + Utf8 [(Lcom/owenyi/menuback/MyAccessibilityService;)V]
   + Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
   + Utf8 [<init>]
   + Utf8 [Code]
-  + Utf8 [StackMapTable]
-  + Utf8 [Z]
+  + Utf8 [I]
+  + Utf8 [Lcom/owenyi/menuback/MyAccessibilityService;]
   + Utf8 [a]
   + Utf8 [android/util/Log]
-  + Utf8 [android/view/MotionEvent]
-  + Utf8 [android/widget/Button]
-  + Utf8 [com/owenyi/menuback/myButton]
+  + Utf8 [android/view/View$OnClickListener]
+  + Utf8 [com/owenyi/menuback/MyAccessibilityService]
   + Utf8 [d]
-  + Utf8 [getAction]
-  + Utf8 [onTouchEvent]
-  + Utf8 [performClick]
-  + Utf8 [sendAccessibilityEvent]
-  + Utf8 [setAlpha]
+  + Utf8 [java/lang/Object]
+  + Utf8 [kp]
+  + Utf8 [onClick]
   + Utf8 [test]
 
 Fields (count = 1):
-  + Field:        a Z
-    Access flags: 0x0
-      = boolean a
-
-Methods (count = 5):
-  - Method:       <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    Access flags: 0x1
-      = public myButton(android.content.Context,android.util.AttributeSet,int)
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 19, locals = 4, stack = 4):
-      [0] aload_0 v0
-      [1] aload_1 v1
-      [2] aload_2 v2
-      [3] iload_3 v3
-      [4] invokespecial #13
-        + Methodref [android/widget/Button.<init> (Landroid/content/Context;Landroid/util/AttributeSet;I)V]
-      [7] aload_0 v0
-      [8] iconst_0
-      [9] putfield #8
-        + Fieldref [com/owenyi/menuback/myButton.a Z]
-      [12] aload_0 v0
-      [13] ldc #1
-        + Float [0.5]
-      [15] invokevirtual #18
-        + Methodref [com/owenyi/menuback/myButton.setAlpha (F)V]
-      [18] return
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
-  - Method:       <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    Access flags: 0x1
-      = public myButton(android.content.Context,android.util.AttributeSet)
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 18, locals = 3, stack = 3):
-      [0] aload_0 v0
-      [1] aload_1 v1
-      [2] aload_2 v2
-      [3] invokespecial #12
-        + Methodref [android/widget/Button.<init> (Landroid/content/Context;Landroid/util/AttributeSet;)V]
-      [6] aload_0 v0
-      [7] iconst_0
-      [8] putfield #8
-        + Fieldref [com/owenyi/menuback/myButton.a Z]
-      [11] aload_0 v0
-      [12] ldc #1
-        + Float [0.5]
-      [14] invokevirtual #18
-        + Methodref [com/owenyi/menuback/myButton.setAlpha (F)V]
-      [17] return
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
-  - Method:       <init>(Landroid/content/Context;)V
-    Access flags: 0x1
-      = public myButton(android.content.Context)
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 17, locals = 2, stack = 2):
-      [0] aload_0 v0
-      [1] aload_1 v1
-      [2] invokespecial #11
-        + Methodref [android/widget/Button.<init> (Landroid/content/Context;)V]
-      [5] aload_0 v0
-      [6] iconst_0
-      [7] putfield #8
-        + Fieldref [com/owenyi/menuback/myButton.a Z]
-      [10] aload_0 v0
-      [11] ldc #1
-        + Float [0.5]
-      [13] invokevirtual #18
-        + Methodref [com/owenyi/menuback/myButton.setAlpha (F)V]
-      [16] return
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
-  + Method:       onTouchEvent(Landroid/view/MotionEvent;)Z
-    Access flags: 0x1
-      = public boolean onTouchEvent(android.view.MotionEvent)
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 60, locals = 2, stack = 2):
-      [0] aload_0 v0
-      [1] aload_1 v1
-      [2] invokespecial #14
-        + Methodref [android/widget/Button.onTouchEvent (Landroid/view/MotionEvent;)Z]
-      [5] pop
-      [6] aload_1 v1
-      [7] invokevirtual #10
-        + Methodref [android/view/MotionEvent.getAction ()I]
-      [10] tableswitch (2 offsets, default=48) (target=58)
-        0: offset = 22, target = 32
-        1: offset = 29, target = 39
-        default: offset = 48, target = 58
-      [32] aload_0 v0
-      [33] iconst_1
-      [34] putfield #8
-        + Fieldref [com/owenyi/menuback/myButton.a Z]
-      [37] iconst_1
-      [38] ireturn
-      [39] aload_0 v0
-      [40] getfield #8
-        + Fieldref [com/owenyi/menuback/myButton.a Z]
-      [43] ifeq +15 (target=58)
-      [46] aload_0 v0
-      [47] iconst_0
-      [48] putfield #8
-        + Fieldref [com/owenyi/menuback/myButton.a Z]
-      [51] aload_0 v0
-      [52] invokevirtual #16
-        + Methodref [com/owenyi/menuback/myButton.performClick ()Z]
-      [55] pop
-      [56] iconst_1
-      [57] ireturn
-      [58] iconst_0
-      [59] ireturn
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 3):
-        - [32] Var: ..., Stack: (empty)
-        - [39] Var: ..., Stack: (empty)
-        - [58] Var: ..., Stack: (empty)
-  + Method:       performClick()Z
-    Access flags: 0x1
-      = public boolean performClick()
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 20, locals = 1, stack = 2):
-      [0] ldc #3
-        + String [test]
-      [2] ldc #2
-        + String [  myButton performClick]
-      [4] invokestatic #9
-        + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [7] pop
-      [8] aload_0 v0
-      [9] invokespecial #15
-        + Methodref [android/widget/Button.performClick ()Z]
-      [12] pop
-      [13] aload_0 v0
-      [14] iconst_1
-      [15] invokevirtual #17
-        + Methodref [com/owenyi/menuback/myButton.sendAccessibilityEvent (I)V]
-      [18] iconst_1
-      [19] ireturn
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
-
-Class file attributes (count = 0):
-
-_____________________________________________________________________
-+ Program class: kp
-  Superclass:    java/lang/Thread
-  Major version: 0x33
-  Minor version: 0x0
-  Access flags:  0x21
-    = public class kp extends java.lang.Thread
-
-Interfaces (count = 0):
-
-Constant Pool (count = 15):
-  + Class [java/lang/Thread]
-  + Class [kp]
-  + Fieldref [kp.a Landroid/accessibilityservice/AccessibilityService;]
-  + Methodref [java/lang/Thread.<init> (Ljava/lang/Runnable;)V]
-  + NameAndType [<init> (Ljava/lang/Runnable;)V]
-  + NameAndType [a Landroid/accessibilityservice/AccessibilityService;]
-  + Utf8 [(Landroid/accessibilityservice/AccessibilityService;)V]
-  + Utf8 [(Ljava/lang/Runnable;)V]
-  + Utf8 [<init>]
-  + Utf8 [Code]
-  + Utf8 [Landroid/accessibilityservice/AccessibilityService;]
-  + Utf8 [a]
-  + Utf8 [java/lang/Thread]
-  + Utf8 [kp]
-
-Fields (count = 1):
-  + Field:        a Landroid/accessibilityservice/AccessibilityService;
-    Access flags: 0x2
-      = private android.accessibilityservice.AccessibilityService a
+  + Field:        a Lcom/owenyi/menuback/MyAccessibilityService;
+    Access flags: 0x1010
+      = final synthetic com.owenyi.menuback.MyAccessibilityService a
 
 Methods (count = 2):
-  - Method:       <init>(Ljava/lang/Runnable;)V
+  - Method:       <init>(Lcom/owenyi/menuback/MyAccessibilityService;)V
     Access flags: 0x1
-      = public kp(java.lang.Runnable)
+      = public kp(com.owenyi.menuback.MyAccessibilityService)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 6, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #4
-        + Methodref [java/lang/Thread.<init> (Ljava/lang/Runnable;)V]
-      [5] return
+      [2] putfield #9
+        + Fieldref [kp.a Lcom/owenyi/menuback/MyAccessibilityService;]
+      [5] aload_0 v0
+      [6] invokespecial #11
+        + Methodref [java/lang/Object.<init> ()V]
+      [9] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       a(Landroid/accessibilityservice/AccessibilityService;)V
+  + Method:       onClick(Landroid/view/View;)V
     Access flags: 0x1
-      = public void a(android.accessibilityservice.AccessibilityService)
+      = public void onClick(android.view.View)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 6, locals = 2, stack = 2):
-      [0] aload_0 v0
-      [1] aload_1 v1
-      [2] putfield #3
-        + Fieldref [kp.a Landroid/accessibilityservice/AccessibilityService;]
-      [5] return
+    + Code attribute instructions (code length = 13, locals = 2, stack = 2):
+      [0] ldc #2
+        + String [test]
+      [2] ldc #1
+        + String [  mButtonBack onClick]
+      [4] invokestatic #10
+        + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
+      [7] pop
+      [8] iconst_1
+      [9] putstatic #8
+        + Fieldref [com/owenyi/menuback/MyAccessibilityService.a I]
+      [12] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
 
